@@ -393,7 +393,6 @@ namespace GameFramework.Download
         /// <returns>新增下载任务的序列编号。</returns>
         public int AddDownload(string downloadPath, string downloadUri, string tag, int priority, object userData)
         {
-            throw new Exception(downloadUri);
             if (string.IsNullOrEmpty(downloadPath))
             {
                 throw new GameFrameworkException("Download path is invalid.");

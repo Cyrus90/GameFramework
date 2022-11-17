@@ -195,6 +195,7 @@
     <Compile Include="Procedure\ProcedureManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource\ApplyResourcesCompleteCallback.cs" />
+    <Compile Include="Resource\CDNHelper.cs" />
     <Compile Include="Resource\CheckResourcesCompleteCallback.cs" />
     <Compile Include="Resource\CheckVersionListResult.cs" />
     <Compile Include="Resource\Constant.cs" />

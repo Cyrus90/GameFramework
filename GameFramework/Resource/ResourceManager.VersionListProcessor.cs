@@ -146,6 +146,7 @@ namespace GameFramework.Resource
                 string localVersionListFilePath = Utility.Path.GetRegularPath(Path.Combine(m_ResourceManager.m_ReadWritePath, RemoteVersionListFileName));
                 int dotPosition = RemoteVersionListFileName.LastIndexOf('.');
                 string latestVersionListFullNameWithCrc32 = Utility.Text.Format("{0}.{2:x8}.{1}", RemoteVersionListFileName.Substring(0, dotPosition), RemoteVersionListFileName.Substring(dotPosition + 1), m_VersionListHashCode);
+                latestVersionListFullNameWithCrc32 = CDNHelper.GetCDNSafeFull(latestVersionListFullNameWithCrc32);
                 m_DownloadManager.AddDownload(localVersionListFilePath, Utility.Path.GetRemotePath(Path.Combine(m_ResourceManager.m_UpdatePrefixUri, latestVersionListFullNameWithCrc32)), this);
             }
 
